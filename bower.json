@@ -1,0 +1,18 @@
+{
+  "name": "date_shifter",
+  "version": "0.0.1",
+  "main": "dist/date_shifter.js",
+  "keywords": ["shifter", "date", "year", "week", "month", "day", "hour"],
+  "author": "Dmitriy Kharchenko <akimoto@yandex.ru>",
+  "description": "Shifter for dates",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aki-russia/date-shifter.git"
+  },
+  "ignore": [
+    "**/.*",
+    ".grunt",
+    "node_modules",
+    "components"
+  ]
+}
