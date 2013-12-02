@@ -9,17 +9,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // jasmine: {
-    //   unit: {
-    //     src: "dist/date_shifter.js",
-    //     options: {
-    //       keepRunner: true,
-    //       specs: 'spec/*_spec.js',
-    //       // vendor: 'spec/vendor/*.js'
-    //       helpers: ['spec/**/**_fixture.js']
-    //     }
-    //   }
-    // },
+    jasmine: {
+      unit: {
+        src: "dist/date_shifter.js",
+        options: {
+          specs: 'spec/*_spec.js',
+          // vendor: 'spec/vendor/*.js'
+          // helpers: ['spec/**/**_fixture.js']
+        }
+      }
+    },
 
     clean: {
       tmp: ['_tmp']

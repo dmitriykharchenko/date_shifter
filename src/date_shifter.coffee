@@ -2,7 +2,9 @@ date_shifter = new () ->
   date_methods = 
     "year": "FullYear",
     "month": "Month",
-    "date": "Date"
+    "date": "Date",
+    "hour": "Hours",
+    "minute": "Minutes"
 
 
   shift_date = (date, quantity_ops, is_clean) ->
@@ -17,10 +19,13 @@ date_shifter = new () ->
     else
       return date
 
+  minutes: (date, quantity) ->
+    shift_date new Date(date),
+      minute: quantity
+
   hours: (date, quantity) ->
-    shift_date new(date),
+    shift_date new Date(date),
       hour: quantity
-  
 
   days: (date, quantity, is_clean) ->
     shift_date new Date(date),

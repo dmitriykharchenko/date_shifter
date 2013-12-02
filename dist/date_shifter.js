@@ -5,7 +5,9 @@ date_shifter = new function() {
   date_methods = {
     "year": "FullYear",
     "month": "Month",
-    "date": "Date"
+    "date": "Date",
+    "hour": "Hours",
+    "minute": "Minutes"
   };
   shift_date = function(date, quantity_ops, is_clean) {
     var method_name, name, quantity, value;
@@ -22,8 +24,13 @@ date_shifter = new function() {
     }
   };
   return {
+    minutes: function(date, quantity) {
+      return shift_date(new Date(date), {
+        minute: quantity
+      });
+    },
     hours: function(date, quantity) {
-      return shift_date(new date, {
+      return shift_date(new Date(date), {
         hour: quantity
       });
     },
